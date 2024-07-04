@@ -10,10 +10,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Cd into "frontend"
-        uses: ./frontend
+    defaults:
+      run:
+        working-directory: frontend
 
+    steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
